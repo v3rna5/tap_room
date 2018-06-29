@@ -31,6 +31,7 @@ function App(){
   }
 `}</style>
       <Header/>
+        
       <Switch>
         <Route exact path='/' component={TapList} />
         <Route component={Error404} />

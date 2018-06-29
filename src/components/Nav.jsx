@@ -1,4 +1,5 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom';
 
 function Nav(){
   return(
@@ -80,8 +81,9 @@ body {
       }
        `} </style>
       <div className="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#notification">Tap List</a>
+
+        <a class="active" href="/">Home</a>
+        <a href="/newtap">Tap List</a>
         <div className="search-container">
         </div>
       </div>
