@@ -2,8 +2,7 @@ import React from 'react';
 import Tap from './Tap';
 import PhotoComponent from '../assets/images/cutepuppies.jpg';
 
-const state = {
-  masterKegList: [
+var  masterKegList= [
     {
       name: 'Ruby Zozzle',
       brewer: 'Hi-Wheel',
@@ -52,18 +51,21 @@ const state = {
       price: '6',
       remaining: '58'
     }
-  ]
-}
+  ];
+
 
 
 function TapList(){
   return (
     <div>
       <hr/>
-      {masterTapList.map((tap, index) =>
-        <Tap names={tap.names}
-          location={tap.location}
-          issue={tap.issue}
+      {masterKegList.map((tap, index) =>
+        <Tap name={tap.name}
+          brewer={tap.brewer}
+          description={tap.description}
+          abv={tap.abv}
+          price={tap.price}
+          remaining={tap.remaining}
           key={index}/>
       )}
     </div>

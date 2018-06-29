@@ -16,18 +16,29 @@ function Tap(props){
 
       `}</style>
     <div className = "background" >
-      <h3>{props.location} - {props.names}</h3>
+      <h3>{props.name} - {props.brewer}</h3>
       </div>
-      <p><em>{props.issue}</em></p>
+      <p><em>{props.description}</em></p>
+          <p><em>{props.abv}</em></p>
+          <p><em>{props.price}</em></p>
+          <p><em>{props.remaining}</em></p>
       <hr/>
     </div>
   );
 }
 
-Tap.propTypes = {
-  names: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  issue: PropTypes.string
+  Tap.propTypes = {
+    name: PropTypes.string.isRequired,
+    brewer: PropTypes.string,
+    description: PropTypes.string,
+    abv: PropTypes.string,
+    price: PropTypes.string,
+    remaining: PropTypes.string,
+
 };
+
+
+
+
 
 export default Tap;
