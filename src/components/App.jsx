@@ -2,12 +2,14 @@ import React from 'react';
 import PhotoComponent from './PhotoComponent';
 import Header from './Header';
 import TapList from './TapList';
+import Nav from './Nav'
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
   return (
     <div>
+      <Nav/>
       <PhotoComponent/>
       <style global jsx >{`
   body {
