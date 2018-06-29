@@ -15,7 +15,7 @@ Will fill this up next week
 
 ## Component Tree
 
-![component tree](https://www.draw.io/#G1s1ybijrpm29e8QDRb3JpLlVpY2f-7nws)
+![component tree](https://drive.google.com/file/d/1s1ybijrpm29e8QDRb3JpLlVpY2f-7nws/view?ts=5b368d41)
 
 :pushpin: **v 2.0 update:**
 
