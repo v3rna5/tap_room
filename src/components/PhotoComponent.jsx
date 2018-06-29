@@ -1,11 +1,11 @@
 import React from 'react';
-import reallyAdorablePuppy from '../assets/images/cutepuppies.jpg'
+import tapPhoto from '../assets/images/taproom.jpg'
 
 function PhotoComponent(){
   return (
     <div>
 
-      <img src={reallyAdorablePuppy}/>
+      <img src={tapPhoto}/>
     </div>
   );
 }

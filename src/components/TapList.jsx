@@ -1,6 +1,6 @@
 import React from 'react';
 import Tap from './Tap';
-import PhotoComponent from '../assets/images/cutepuppies.jpg';
+import PhotoComponent from '../assets/images/taproom.jpg';
 
 var  masterKegList= [
     {

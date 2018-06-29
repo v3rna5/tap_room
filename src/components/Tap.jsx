@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import reallyAdorablePuppy from '../assets/images/cutepuppies.jpg'
+import tapPhoto from '../assets/images/taproom.jpg'
 
 function Tap(props){
   return (
@@ -10,7 +10,7 @@ function Tap(props){
         .background {
           width: 300px;
           height: 300px;
-          background-image: url(${reallyAdorablePuppy});
+          background-image: url(${tapPhoto});
         }
 
 
