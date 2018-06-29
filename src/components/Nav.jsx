@@ -81,8 +81,7 @@ body {
        `} </style>
       <div className="topnav">
         <a class="active" href="#home">Home</a>
-        <a href="#notification">Notifications</a>
-        <a href="#messages">Messages</a>
+        <a href="#notification">Tap List</a>
         <div className="search-container">
         </div>
       </div>
