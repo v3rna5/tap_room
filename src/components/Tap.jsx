@@ -15,9 +15,7 @@ function Tap(props){
 
 
       `}</style>
-    <div className = "background" >
-
-      </div>
+    
         <h3>{props.name} - {props.brewer}</h3>
       <p><em>{props.description}</em></p>
           <p><em>{props.abv}</em></p>
