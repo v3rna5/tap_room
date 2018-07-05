@@ -1,5 +1,5 @@
 import React from 'react';
-import tapPhoto from '../assets/images/taproom.jpg'
+import tapPhoto from '../assets/images/tap_room2.jpg'
 
 function PhotoComponent(){
   return (

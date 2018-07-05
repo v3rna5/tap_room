@@ -3,6 +3,7 @@ import React from 'react'
 function SearchBox(){
   return(
     <div>
+      
       <style jsx>{`
         body {
             font-family: Arial;

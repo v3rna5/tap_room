@@ -1,6 +1,6 @@
 import React from 'react';
 import Tap from './Tap';
-import PhotoComponent from '../assets/images/taproom.jpg';
+import PhotoComponent from '../assets/images/tap_room2.jpg';
 
 var  masterKegList= [
     {
@@ -58,7 +58,8 @@ var  masterKegList= [
 function TapList(){
   return (
     <div>
-      <hr/>
+
+    
       {masterKegList.map((tap, index) =>
         <Tap name={tap.name}
           brewer={tap.brewer}
