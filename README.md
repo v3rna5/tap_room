@@ -3,31 +3,10 @@ Verna Santos, June 29, 2018
 
 :email: vernajs@gmail.com
 
-### Development in Angular vs. React
-
-Some thoughts on the differences in development.
-
-**Angular**: _Typescript-based JavaScript framework._
-
-**React**: _JavaScript library for building user interfaces._
-
-Will fill this up next week
 
 ## Component Tree
 
 ![component tree](https://drive.google.com/file/d/1s1ybijrpm29e8QDRb3JpLlVpY2f-7nws/view?ts=5b368d41)
-
-:pushpin: **v 2.0 update:**
-
-* The components that require state, (NewKegForm and Keg) have been highlighted in red.
-
-* I believe state should live in the root component, **App**. As it is the common parent of both NewKegForm and Keg.
-
-:pushpin: **v 2.5 update:**
-
-* Added Admin route with note about specific view connection to KegList.
-
-* Highlighted App to indicate connection of state.
 
 ## App Objectives
 
@@ -85,8 +64,3 @@ Install NPM packages.
 ```
 $ npm install
 ```
-
-## Notes
-
-*
-*
