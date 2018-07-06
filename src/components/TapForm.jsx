@@ -58,10 +58,7 @@ function TapForm(props){
                   id='reamaining'
                   placeholder='Remaining'
                   ref={(input) => {_remaining = input;}}/>
-        // <textarea
-        //   id='issue'
-        //   placeholder='Describe your issue.'
-        //   ref={(textarea) => {_issue = textarea;}}/>
+      
         <button type='submit'>Add!</button>
       </form>
     </div>

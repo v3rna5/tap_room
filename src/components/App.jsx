@@ -10,7 +10,6 @@ import { Switch, Route } from 'react-router-dom';
 import Moment from 'moment';
 import Admin from './Admin';
 import { v4 } from 'uuid';
-import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -94,5 +93,5 @@ color: white;
     </div>
   );
 }
-
+}
 export default App;
