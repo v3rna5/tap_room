@@ -6,7 +6,7 @@ Verna Santos, June 29, 2018
 
 ## Component Tree
 
-![component tree](https://drive.google.com/file/d/1s1ybijrpm29e8QDRb3JpLlVpY2f-7nws/view?ts=5b368d41)
+![component tree](https://drive.google.com/file/d/1s1ybijrpm29e8QDRb3JpLlVpY2f-7nws/view?usp=sharing)
 
 ## App Objectives
 
