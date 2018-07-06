@@ -50,7 +50,6 @@ _Both_
 - [ ] Edit a keg.
 - [ ] Delete a keg from kegs list.
 - [x] Admin route that displays employee controls. !Not on patron route.
-- [ ] Sell a pint functionality.
 - [x] Explore Material UI in React.
 
 ## Setup Instructions
