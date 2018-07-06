@@ -1,9 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import tapPhoto from '../assets/images/taproom.jpg'
 
 function Tap(props){
   const tapInformation =
     <div>
+      <style global jsx>{`
+        .background {
+          background-image: url(${tapPhoto});
+        }
+      `}</style>
+
+
       <h3>{props.brewer} - {props.names}</h3>
       <h4>{props.formattedWaitTime}</h4>
       <hr/>

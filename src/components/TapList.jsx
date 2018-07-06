@@ -1,6 +1,7 @@
 import React from 'react';
 import Tap from './Tap';
 import PropTypes from 'prop-types';
+import PhotoComponent from '../assets/images/taproom.jpg';
 
 function TapList(props){
   return (

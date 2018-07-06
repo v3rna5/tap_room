@@ -7,6 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 import Moment from 'moment';
 import Admin from './Admin';
 import PhotoComponent from './PhotoComponent';
+import tapPhoto from '../assets/images/taproom.jpg'
 
 class App extends React.Component {
 
@@ -54,10 +55,11 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
-           <PhotoComponent/>
              <style global jsx >{`
     body {
       font-family: Helvetica;
+      background-image: url(${tapPhoto});
+color: white;
     }
     .box {
       border: none;
@@ -85,7 +87,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 
 export default App;
