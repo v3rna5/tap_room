@@ -9,14 +9,14 @@ import TapControl from './TapControl';
 import { Switch, Route } from 'react-router-dom';
 import Moment from 'moment';
 import Admin from './Admin';
-import { v4 } from 'uuid';
+
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: {},
+      masterTapList: [],
       selectedTap: null
     };
     this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
@@ -26,72 +26,50 @@ class App extends React.Component {
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
       this.updateTapElapsedWaitTime(),
-    60000
+    5000
     );
   }
-
   componentWillUnmount(){
     clearInterval(this.waitTimeUpdateTimer);
   }
-
   updateTapElapsedWaitTime() {
-    var newMasterTapList = Object.assign({}, this.state.masterTapList);
-    Object.keys(newMasterTapList).forEach(tapId => {
-      newMasterTapList[TapId].formattedWaitTime = (newMasterTapList[tapId].timeOpen).fromNow(true);
-    });
+    let newMasterTapList = this.state.masterTapList.slice();
+    newMasterTapList.forEach((tap) =>
+      tap.formattedWaitTime = (tap.timeOpen).fromNow(true)
+    );
     this.setState({masterTapList: newMasterTapList});
   }
 
   handleAddingNewTapToList(newTap){
-    var newTapId = v4()
-    var newMasterTapList = Object.assign({}, this.state.masterTapList, {
-      [newTapId]: newTap
-    });
-    newMasterTapList[newTapId].formattedWaitTime = newMasterTapList[newTapId].timeOpen.fromNow(true);
+    var newMasterTapList = this.state.masterTapList.slice();
+    newTap.formattedWaitTime = (newTap.timeOpen).fromNow(true);
+    newMasterTapList.push(newTap);
     this.setState({masterTapList: newMasterTapList});
   }
 
-  handleChangingSelectedTap(tapId){
-    this.setState({selectedTap: tapId});
+  handleChangingSelectedTap(tap){
+    this.setState({selectedTap: tap});
   }
 
   render(){
-    console.log(this.state.masterTapList);
     return (
 
-    <div>
-    <Header/>
-      <Nav/>
+      <div>
 
-      <style global jsx >{`
+        <Header/>
+        
+        <Switch>
+          <Route exact path='/' render={()=><TapList tapList={this.state.masterTapList} />} />
+          <Route path='/newtap' render={()=><TapControl onTapCreation={this.handleAddingNewTapToList} />} />
+          <Route path='/admin' render={(props)=><Admin tapList={this.state.masterTapList} currentRouterPath={props.location.pathname}
+            onTapSelection={this.handleChangingSelectedTap}
+            selectedTap={this.state.selectedTap}/>} />
+          <Route component={Error404} />
+        </Switch>
+      </div>
+    );
+  }
 
-  body {
-    font-family: Helvetica;
-  background-image: url(${tapPhoto});
-color: white;
-  }
-  .box {
-    border: none;
-    display: block;
-    border-bottom: 2px solid #fff;
-    margin-bottom: 10px;
-  }
-  .box:hover {
-    border-bottom: 2px solid #ccc;
-    outline: 0;
-  }
-  a {
-    color: #888;
-    text-decoration: none;
-  }
-`}</style>
-
-      <Switch>
-        <Route exact path='/' component={TapList} />
-        <Route component={Error404} />
-      </Switch>
-    </div>
-  );
 }
-}
+
 export default App;
