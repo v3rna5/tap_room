@@ -6,7 +6,7 @@ function Tap(props){
   const tapInformation =
     <div>
       <style global jsx>{`
-        .background {
+  
           background-image: url(${tapPhoto});
         }
       `}</style>
