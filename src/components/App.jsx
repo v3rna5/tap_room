@@ -1,15 +1,12 @@
 import React from 'react';
-import PhotoComponent from './PhotoComponent';
-import tapPhoto from '../assets/images/tap_room2.jpg'
 import Header from './Header';
 import TapList from './TapList';
-import Nav from './Nav'
+import NewTapControl from './NewTapControl';
 import Error404 from './Error404';
-import TapControl from './TapControl';
 import { Switch, Route } from 'react-router-dom';
 import Moment from 'moment';
 import Admin from './Admin';
-
+import PhotoComponent from './PhotoComponent';
 
 class App extends React.Component {
 
@@ -29,9 +26,11 @@ class App extends React.Component {
     5000
     );
   }
+
   componentWillUnmount(){
     clearInterval(this.waitTimeUpdateTimer);
   }
+
   updateTapElapsedWaitTime() {
     let newMasterTapList = this.state.masterTapList.slice();
     newMasterTapList.forEach((tap) =>
@@ -53,14 +52,31 @@ class App extends React.Component {
 
   render(){
     return (
-
       <div>
-
         <Header/>
-        
+           <PhotoComponent/>
+             <style global jsx >{`
+    body {
+      font-family: Helvetica;
+    }
+    .box {
+      border: none;
+      display: block;
+      border-bottom: 2px solid #fff;
+      margin-bottom: 10px;
+    }
+    .box:hover {
+      border-bottom: 2px solid #ccc;
+      outline: 0;
+    }
+    a {
+      color: #888;
+      text-decoration: none;
+    }
+  `}</style>
         <Switch>
           <Route exact path='/' render={()=><TapList tapList={this.state.masterTapList} />} />
-          <Route path='/newtap' render={()=><TapControl onTapCreation={this.handleAddingNewTapToList} />} />
+          <Route path='/newtap' render={()=><NewTapControl onNewTapCreation={this.handleAddingNewTapToList} />} />
           <Route path='/admin' render={(props)=><Admin tapList={this.state.masterTapList} currentRouterPath={props.location.pathname}
             onTapSelection={this.handleChangingSelectedTap}
             selectedTap={this.state.selectedTap}/>} />

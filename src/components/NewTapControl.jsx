@@ -1,9 +1,9 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
-import TapForm from './TapForm';
+import NewTapForm from './NewTapForm';
 import PropTypes from 'prop-types';
 
-class TapControl extends React.Component {
+class NewTapControl extends React.Component {
 
   constructor(props) {
     super(props);
@@ -20,7 +20,7 @@ class TapControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <TapForm onNewTapCreation={this.props.onNewTapCreation}/>;
+      currentlyVisibleContent = <NewTapForm onNewTapCreation={this.props.onNewTapCreation}/>;
     } else {
       currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
     }
@@ -32,8 +32,8 @@ class TapControl extends React.Component {
   }
 }
 
-TapControl.propTypes = {
+NewTapControl.propTypes = {
   onNewTapCreation: PropTypes.func
 };
 
-export default TapControl;
+export default NewTapControl;
