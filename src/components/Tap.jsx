@@ -11,8 +11,11 @@ function Tap(props){
         }
       `}</style>
 
-
       <h3>{props.brewer} - {props.names}</h3>
+      <h4>{props.description}</h4>
+      <h4>{props.abv}</h4>
+        <h4>{props.price}</h4>
+          <h4>{props.remaining}</h4>
       <h4>{props.formattedWaitTime}</h4>
       <hr/>
     </div>;

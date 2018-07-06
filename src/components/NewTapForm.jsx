@@ -34,27 +34,26 @@ function NewTapForm(props){
           id='brewer'
           placeholder='Brewer'
           ref={(input) => {_brewer = input;}}/>
-
         <textarea
           id='description'
           placeholder='Tap Description'
           ref={(textarea) => {_description = textarea;}}/>
-          <input
-            type='text'
-            id='abv'
-            placeholder='Abv'
-            ref={(input) => {_abv = input;}}/>
-            <input
-              type='text'
-              id='price'
-              placeholder='Price'
-              ref={(input) => {_price = input;}}/>
-              <input
-                type='text'
-                id='remaining'
-                placeholder='Remaining'
-                ref={(input) => {_remaining = input;}}/>
-              <button type='submit'>Add!</button>
+        <input
+          type='text'
+          id='abv'
+          placeholder='Abv'
+          ref={(input) => {_abv = input;}}/>
+        <input
+          type='text'
+          id='price'
+          placeholder='Price'
+          ref={(input) => {_price = input;}}/>
+        <input
+          type='text'
+          id='remaining'
+          placeholder='Remaining'
+          ref={(input) => {_remaining = input;}}/>
+        <button type='submit'>Add!</button>
       </form>
     </div>
   );

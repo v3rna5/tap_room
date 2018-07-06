@@ -12,6 +12,9 @@ function TapList(props){
         return <Tap names={tap.names}
           brewer={tap.brewer}
           description={tap.description}
+          abv={tap.abv}
+          price={tap.price}
+          remaining={tap.remaining}
           formattedWaitTime={tap.formattedWaitTime}
           currentRouterPath={props.currentRouterPath}
           key={tapId}
