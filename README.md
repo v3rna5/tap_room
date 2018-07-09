@@ -6,7 +6,7 @@ Verna Santos, June 29, 2018
 
 ## Component Tree
 
-![component tree](https://raw.githubusercontent.com/v3rna5/tap_room_react/src/assets/images/Tap_Room.png)
+![component tree](src/assets/images/Tap_Room.png)
 
 ## App Objectives
 
